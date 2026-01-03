@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Jobs in Russia - Recruitment 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #c41e3a 0%, #003399 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #003399 0%, #1a5490 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .highlight-box {
+            background: rgba(255,255,255,0.15);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-left: 5px solid #c41e3a;
+        }
+
+        .highlight-box strong {
+            color: #ffd700;
+            font-size: 1.3rem;
+        }
+
+        .key-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid #c41e3a;
+        }
+
+        .info-card h3 {
+            color: #003399;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #c41e3a;
+            margin: 1rem 0;
+        }
+
+        .positions-section {
+            margin: 3rem 0;
+        }
+
+        .positions-section h2 {
+            color: #003399;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .positions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .position-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #c41e3a;
+        }
+
+        .position-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .position-card header {
+            background: linear-gradient(135deg, #c41e3a 0%, #a01a2f 100%);
+            color: white;
+            padding: 1.5rem;
+            margin: 0;
+        }
+
+        .position-card header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .position-card header p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .position-card .content {
+            padding: 2rem;
+        }
+
+        .position-card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .position-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .position-card li:last-child {
+            border-bottom: none;
+        }
+
+        .position-card li strong {
+            color: #003399;
+        }
+
+        .benefits-section {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .benefits-section h2 {
+            color: #003399;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+
+        .benefit-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h4 {
+            color: #c41e3a;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .requirements-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8ecf1 100%);
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .requirements-section h2 {
+            color: #003399;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .requirements-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .requirement-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #c41e3a;
+        }
+
+        .requirement-box h4 {
+            color: #c41e3a;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .requirement-box ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+        }
+
+        .requirement-box li {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .salary-section {
+            background: linear-gradient(135deg, #c41e3a 0%, #a01a2f 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .salary-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .salary-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            color: #ffd700;
+        }
+
+        .salary-section p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            opacity: 0.8;
+        }
+
+        .hero-image {
+            margin: 0 0 3rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hindi-subtitle {
+            font-size: 1.8rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .hindi-text {
+            opacity: 0.9;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .info-card .value {
+                font-size: 1.5rem;
+            }
+
+            .position-card header h3 {
+                font-size: 1.2rem;
+            }
+
+            .salary-amount {
+                font-size: 2rem;
+            }
+        }
+
+        @media print {
+            header {
+                position: static;
+            }
+
+            .position-card:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <h1>🇷🇺 Construction Jobs in Russia | रूस में निर्माण कार्य</h1>
+                <p>Prime Recruitment Opportunity 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-image">
+            <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/307968da-be66-4bbc-b7bb-0cfec7e87647.png" alt="Indian construction workers on Russian building project" style="width: 100%; height: auto; display: block;">
+        </div>
+
+        <div class="hero">
+            <h2>🏗️ Building Excellence in Russia</h2>
+            <h2 class="hindi-subtitle">रूस में श्रेष्ठता निर्माण करें</h2>
+            <p>Join a dynamic construction team working on modern residential projects</p>
+            <p class="hindi-text">आधुनिक आवासीय परियोजनाओं पर काम करने वाली गतिशील निर्माण टीम में शामिल हों</p>
+            <div class="highlight-box">
+                <p><strong>40 Positions Available</strong> for Skilled Construction Professionals from India</p>
+                <p class="hindi-text" style="margin-top: 0.5rem;">भारत से कुशल निर्माण पेशेवरों के लिए 40 पद उपलब्ध हैं</p>
+                <p style="margin-top: 1rem; opacity: 0.9;">Competitive salary, full benefits, and Indian meals provided on-site</p>
+                <p class="hindi-text" style="margin-top: 0.5rem;">प्रतिस्पर्धी वेतन, पूर्ण लाभ और भारतीय खाना साइट पर प्रदान किया जाता है</p>
+            </div>
+        </div>
+
+        <section class="key-info">
+            <div class="info-card">
+                <h3>Total Positions | कुल पद</h3>
+                <div class="value">40</div>
+                <p>Skilled Construction Workers | कुशल निर्माण कार्मिक</p>
+            </div>
+            <div class="info-card">
+                <h3>Monthly Salary | मासिक वेतन</h3>
+                <div class="value">₽83.5K</div>
+                <p>Per Month | प्रति माह</p>
+            </div>
+            <div class="info-card">
+                <h3>Work Schedule | कार्य अनुसूची</h3>
+                <div class="value">6 Days</div>
+                <p>Per Week + 1 Day Off | सप्ताह में 6 दिन + 1 दिन छुट्टी</p>
+            </div>
+            <div class="info-card">
+                <h3>Daily Hours | दैनिक घंटे</h3>
+                <div class="value">10 Hrs</div>
+                <p>Per Day | प्रति दिन</p>
+            </div>
+        </section>
+
+        <section class="positions-section">
+            <h2>📋 Available Positions | उपलब्ध पद</h2>
+            <div class="positions-grid">
+                <div class="position-card">
+                    <header>
+                        <h3>🏗️ Monolithic Concrete Workers</h3>
+                        <p>मोनोलिथिक कंक्रीट कार्मिक</p>
+                        <p style="margin-top: 0.3rem; font-size: 0.85rem;">Манолитчики (Monolithic Specialists)</p>
+                    </header>
+                    <div class="content">
+                        <ul>
+                            <li><strong>Primary Tasks | मुख्य कार्य:</strong></li>
+                            <li>• Concrete column (pillar) construction | कंक्रीट स्तंभ निर्माण</li>
+                            <li>• Beam and slab installation | बीम और स्लैब स्थापना</li>
+                            <li>• Foundation and structural work | फाउंडेशन कार्य</li>
+                            <li>• Formwork assembly and removal | फॉर्मवर्क असेंबली</li>
+                            <li>• Concrete pouring and leveling | कंक्रीट डालना</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; color: #666; font-size: 0.95rem;"><strong>Experience Required | अनुभव की आवश्यकता:</strong> Minimum 3-5 years | न्यूनतम 3-5 साल</p>
+                    </div>
+                </div>
+
+                <div class="position-card">
+                    <header>
+                        <h3>🧱 Masons & Plasterers</h3>
+                        <p>राजमिस्त्री और पलस्तर कार्मिक</p>
+                        <p style="margin-top: 0.3rem; font-size: 0.85rem;">Каменщики-штукатуры (Rajmistri)</p>
+                    </header>
+                    <div class="content">
+                        <ul>
+                            <li><strong>Primary Tasks | मुख्य कार्य:</strong></li>
+                            <li>• Brick and stone wall construction | ईंट की दीवार निर्माण</li>
+                            <li>• Masonry jointing with cement-sand | राजमिस्त्री जोड़ना</li>
+                            <li>• Wall plastering and finishing | दीवार पलस्तर</li>
+                            <li>• Surface leveling and smoothing | सतह समतल करना</li>
+                            <li>• Pre-finish surface preparation | सतह तैयारी</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; color: #666; font-size: 0.95rem;"><strong>Experience Required | अनुभव की आवश्यकता:</strong> Minimum 2-4 years | न्यूनतम 2-4 साल</p>
+                    </div>
+                </div>
+
+                <div class="position-card">
+                    <header>
+                        <h3>🔨 General Construction Workers</h3>
+                        <p>सामान्य निर्माण कार्मिक</p>
+                        <p style="margin-top: 0.3rem; font-size: 0.85rem;">Строительные рабочие (Multi-skilled)</p>
+                    </header>
+                    <div class="content">
+                        <ul>
+                            <li><strong>Primary Tasks | मुख्य कार्य:</strong></li>
+                            <li>• General site construction work | साइट निर्माण कार्य</li>
+                            <li>• Material handling and logistics | सामग्री हैंडलिंग</li>
+                            <li>• Site maintenance and cleaning | साइट रखरखाव</li>
+                            <li>• Support for specialized teams | टीम सहायता</li>
+                            <li>• Safety protocol compliance | सुरक्षा अनुपालन</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; color: #666; font-size: 0.95rem;"><strong>Experience Required | अनुभव की आवश्यकता:</strong> Minimum 1-2 years | न्यूनतम 1-2 साल</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <h2>🎁 Complete Benefits Package | संपूर्ण लाभ पैकेज</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="icon">🍽️</div>
+                    <h4>Indian Meals | भारतीय खाना</h4>
+                    <p>3 meals per day | दिन में 3 भोजन</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">🏥</div>
+                    <h4>Health Insurance | स्वास्थ्य बीमा</h4>
+                    <p>Comprehensive coverage | व्यापक कवरेज</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">🏠</div>
+                    <h4>Accommodation | आवास</h4>
+                    <p>Fully provided | पूरी तरह प्रदान किया</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">👥</div>
+                    <h4>Indian Community | भारतीय समुदाय</h4>
+                    <p>Existing workers | मौजूदा कार्मिक</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">⏰</div>
+                    <h4>Work Schedule | कार्य अनुसूची</h4>
+                    <p>6 days, 1 day off | 6 दिन, 1 दिन छुट्टी</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon">💼</div>
+                    <h4>Professional Growth | व्यावसायिक विकास</h4>
+                    <p>International experience | अंतर्राष्ट्रीय अनुभव</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="requirements-section">
+            <h2>✅ Essential Requirements | आवश्यक आवश्यकताएं</h2>
+            <div class="requirements-content">
+                <div class="requirement-box">
+                    <h4>🎓 Skills & Experience | कौशल और अनुभव</h4>
+                    <ul>
+                        <li>Proven experience in relevant field | संबंधित क्षेत्र में अनुभव</li>
+                        <li>Technical proficiency | तकनीकी दक्षता</li>
+                        <li>Ability to follow safety protocols | सुरक्षा अनुपालन</li>
+                        <li>Team collaboration skills | टीम सहयोग</li>
+                        <li>Physical fitness | शारीरिक फिटनेस</li>
+                    </ul>
+                </div>
+                <div class="requirement-box">
+                    <h4>📋 Documentation | दस्तावेज़</h4>
+                    <ul>
+                        <li>Valid passport | वैध पासपोर्ट</li>
+                        <li>Work visa authorization | कार्य वीजा</li>
+                        <li>Health certification | स्वास्थ्य प्रमाणपत्र</li>
+                        <li>Experience certificates | अनुभव प्रमाणपत्र</li>
+                        <li>Background verification | पृष्ठभूमि सत्यापन</li>
+                    </ul>
+                </div>
+                <div class="requirement-box">
+                    <h4>💪 Personal Qualities | व्यक्तिगत गुण</h4>
+                    <ul>
+                        <li>Physical endurance | शारीरिक सहनशीलता</li>
+                        <li>Attention to detail | विस्तार पर ध्यान</li>
+                        <li>Reliable and punctual | विश्वसनीय</li>
+                        <li>Safety-conscious mindset | सुरक्षा-सचेत</li>
+                        <li>Adaptability | कार्य अनुकूल</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="salary-section">
+            <h2>💰 Compensation Package | मुआवजा पैकेज</h2>
+            <div class="salary-amount">₽83,500</div>
+            <p>Per Month | प्रति माह</p>
+            <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.9;">
+                Plus: Food • Accommodation • Health Insurance • All Benefits Included
+            </p>
+            <p style="margin-top: 0.5rem; font-size: 0.95rem; opacity: 0.9;">
+                अतिरिक्त: खाना • आवास • स्वास्थ्य बीमा • सभी लाभ शामिल
+            </p>
+        </section>
+
+        <section style="background: white; padding: 3rem 2rem; border-radius: 10px; margin: 3rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h2 style="color: #003399; font-size: 1.8rem; margin-bottom: 0.5rem; text-align: center;">ℹ️ Why Choose This Opportunity?</h2>
+            <h3 style="color: #666; font-size: 1.3rem; margin-bottom: 1.5rem; text-align: center; font-weight: normal;">इस अवसर को क्यों चुनें?</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">✨ Established Project | स्थापित परियोजना</h4>
+                    <p>Modern construction with proven infrastructure working for years in Russia.</p>
+                </div>
+                <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">👨‍👩‍👧‍👦 Indian Worker Community | भारतीय समुदाय</h4>
+                    <p>Existing Indian workforce - no cultural adjustment challenges.</p>
+                </div>
+                <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">🌍 International Experience | अंतर्राष्ट्रीय अनुभव</h4>
+                    <p>Build your resume with valuable international construction experience.</p>
+                </div>
+                <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">💪 Competitive Salary | प्रतिस्पर्धी वेतन</h4>
+                    <p>Monthly salary of ₽83,500 with ZERO deductions for food and accommodation.</p>
+                </div>
+                <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">🔒 Full Security | पूर्ण सुरक्षा</h4>
+                    <p>Health insurance and accommodation fully covered by the company.</p>
+                </div>
+                <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">📞 Support System | सहायता प्रणाली</h4>
+                    <p>Dedicated support from our office in Russia and India.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>Construction Project Recruitment 2026</strong></p>
+        <p style="font-size: 0.95rem; margin-top: 0.3rem;">Specialized staffing solutions for international construction projects</p>
+        <p style="margin-top: 1rem; opacity: 0.6;">For inquiries and recruitment collaboration, please contact our team.</p>
+    </footer>
+</body>
+</html>
